@@ -1,0 +1,4 @@
+the scripts contained with in this file Where
+Created by : Kyle Howard Krug
+Project Start date: 7/11/2019
+Purpose: The purpose of this project is to create a module GUI template that can be adjusted to increase the speed of meeting user needs 
