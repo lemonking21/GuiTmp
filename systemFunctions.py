@@ -1,5 +1,5 @@
 import re
-from tkinter import Button, Menu, Toplevel, Label, Text, PanedWindow , VERTICAL, END, messagebox, DISABLED
+from tkinter import Button, Menu, Toplevel, Label, Text, PanedWindow , VERTICAL, END, messagebox
 from tkinter.filedialog import askopenfilename
 import smtplib
 from email.mime.text import MIMEText                    
@@ -27,7 +27,6 @@ def file_update(about):
     about.delete('1.0', END)
     about.insert('1.0',name)
     about.config(state= 'disable')
-
 #############################################################
 # Template for a the main window
 #############################################################
@@ -42,8 +41,6 @@ def main_win(i):
     fbtn.pack(side= 'bottom')
     win_menu(i)
     close_btn(i)
-
-
 #############################################################
 # Template for a new pop up window
 #############################################################
@@ -52,8 +49,6 @@ def open_wind(i):
     i_win.attributes('-topmost',1)
     return i_win
 #############################################################
-
-
 #############################################################
 # Template for the menu bar
 #############################################################
@@ -79,8 +74,6 @@ def win_menu(i):
     about.add_command(label = 'Info',command = lambda:about_win(i))
     menu.add_cascade(label = 'About', menu = about)
 #############################################################
-
-
 #############################################################
 # The pop up about window on the menu bar
 #############################################################
@@ -94,7 +87,6 @@ def about_win(i):
     about.pack()
     close_btn(a)
 #############################################################
-
 #############################################################
 # The pop up email window on the menu bar
 #############################################################
@@ -112,7 +104,6 @@ def email_win(i):
     subBTN= Button(p,text = 'Submit',command = lambda:checkEmail(text,e))
     subBTN.pack()
 #############################################################
-
 #############################################################
 # Close button
 #############################################################
@@ -120,8 +111,6 @@ def close_btn(i):
     btn= Button(i, text = 'close', command = i.destroy)
     btn.pack(side = 'right', expand = 1)
 #############################################################
-
-
 #############################################################
 # File selection option
 #############################################################
@@ -138,8 +127,6 @@ def select_file():
     set_file_name(name)
     return name
 #############################################################
-
-
 #############################################################
 # Set file name
 #############################################################
@@ -147,7 +134,6 @@ def set_file_name(name):
     global filename
     filename = name
 #############################################################
-
 #############################################################
 # get the file name function
 #############################################################
@@ -155,7 +141,6 @@ def getFilename():
     global filename
     return filename
 #############################################################
-
 #############################################################
 # Function to check if the email is in the current format
 #############################################################
@@ -170,14 +155,12 @@ def checkEmail(text,i):
         send_email(email,getFilename())
         i.destroy()
 #############################################################
-
 #############################################################
 # Error message for if the code is in incorrect format
 #############################################################
 def push_sub(text, i): 
     messagebox.showinfo('Error' , 'Incorrect email format, please reenter the \n address you want to send the file to.')
 ############################################################## 
-
 #############################################################
 # Setting up and sending an email
 #############################################################
