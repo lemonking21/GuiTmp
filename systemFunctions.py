@@ -2,7 +2,7 @@ import re
 from tkinter import Button, Menu, Toplevel, Label, Text, PanedWindow , VERTICAL, END, messagebox
 from tkinter.filedialog import askopenfilename
 import smtplib
-from email.mime.text import MIMEText                    
+from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.base import MIMEBase
 from email import encoders
@@ -14,7 +14,7 @@ import datetime
 #Created ON 7/11/2019
 #This was created to function as a basic gui template for all
 #Future programs that may need it
-#This is a live code, it can be edited at any point, so make 
+#This is a live code, it can be edited at any point, so make
 #to keep a few backups
 #Last updated on 7/11/2019
 #############################################################
@@ -158,9 +158,9 @@ def checkEmail(text,i):
 #############################################################
 # Error message for if the code is in incorrect format
 #############################################################
-def push_sub(text, i): 
+def push_sub(text, i):
     messagebox.showinfo('Error' , 'Incorrect email format, please reenter the \n address you want to send the file to.')
-############################################################## 
+#############################################################
 #############################################################
 # Setting up and sending an email
 #############################################################
